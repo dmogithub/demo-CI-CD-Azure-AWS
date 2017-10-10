@@ -21,10 +21,8 @@ node {
 
         app.inside {
            parallel (
-     phase1: { sh "test passed" },
-     phase2: { sh "test passed" },
-     phase3: { sh "test passed" },
-     phase4: { sh "test passed" }
+     check_vulnerability: { sh "vulnerability test passed" },
+     check_deployment: { sh "deployment test passed" }
    )
         }
     }
