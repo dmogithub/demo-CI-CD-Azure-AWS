@@ -44,6 +44,7 @@ node {
     stage('Deploy approval'){
     input "Deploy to prod?"
     }
+ } 
 }
     node('aws-slave') {
         stage('deploy to PROD')  {
@@ -52,6 +53,5 @@ node {
         docker.withRegistry('https://experiences17.azurecr.io', 'azure-registry-credentials') {    
              sh 'docker stack deploy --with-registry-auth  -c myapp-prod.yml prodapp'
         }
-      }
-   }    
+     }   
 }  
