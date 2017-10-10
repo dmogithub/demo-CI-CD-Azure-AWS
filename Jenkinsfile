@@ -21,8 +21,8 @@ node {
 
         app.inside {
            parallel (
-     phase1: { sh "echo p1; sleep 20s; echo phase1" },
-     phase2: { sh "echo p2; sleep 40s; echo phase2" }
+     phase1: { sh "test passed" },
+     phase2: { sh "test passed" }
    )
         }
     }
