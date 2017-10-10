@@ -20,9 +20,9 @@ node {
         /* Ideally, we would run a test framework against our image. */
 
         app.inside {
-           parallel (
-     phase1: { sh "vulnerability test passed" },
-     phase2: { sh "deployment test passed" }
+   parallel (
+     vulnerability: { sh "echo vulnerability test passed" },
+     deployment: { sh "echo deployment test passed" }
    )
         }
     }
