@@ -34,7 +34,7 @@ node {
             app.push("latest")
         }
     }
-    stage('deploy to DEV on Azure') {
+    stage('deploy DEV on Azure') {
         /* Ideally, we would run a test framework against our image.
          * For this example, we're using a Engie-type approach ;-) */
        
@@ -47,7 +47,7 @@ node {
  } 
 }
     node('aws-slave') {
-        stage('deploy to PROD on AWS')  {
+        stage('deploy PROD on AWS')  {
         /* Ideally, we would run a test framework against our image.
         
         * For this example, we're using a Engie-type approach ;-) */
