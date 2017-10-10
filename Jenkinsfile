@@ -44,6 +44,8 @@ node {
     stage('Deploy approval'){
     input "Deploy to prod?"
     }
+}
+    node('aws-slave') {
         stage('deploy to PROD')  {
         /* Ideally, we would run a test framework against our image.
          * For this example, we're using a Engie-type approach ;-) */
