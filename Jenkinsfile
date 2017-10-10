@@ -21,8 +21,8 @@ node {
 
         app.inside {
            parallel (
-     vulnerability: { sh "vulnerability test passed" },
-     deployment: { sh "deployment test passed" }
+     phase1: { sh "vulnerability test passed" },
+     phase2: { sh "deployment test passed" }
    )
         }
     }
