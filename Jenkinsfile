@@ -49,7 +49,9 @@ node {
     node('aws-slave') {
         stage('deploy to PROD')  {
         /* Ideally, we would run a test framework against our image.
-         * For this example, we're using a Engie-type approach ;-) */
+        
+        * For this example, we're using a Engie-type approach ;-) */
+             checkout scm
         docker.withRegistry('https://experiences17.azurecr.io', 'azure-registry-credentials') {    
              sh 'docker stack deploy --with-registry-auth  -c myapp-prod.yml prodapp'
         }
