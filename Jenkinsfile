@@ -21,8 +21,8 @@ node {
 
         app.inside {
    parallel (
-     phase1: { sh "echo phase1" },
-     phase2: { sh "echo phase2" }
+     phase1: { echo "phase1" },
+     phase2: { echo "phase2" }
    )
         }
     }
