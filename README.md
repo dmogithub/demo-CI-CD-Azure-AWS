@@ -1,1 +1,2 @@
-#  Engie IT CI/CD demo with docker : deploy a wordpress application in AWS & Azure
+#  Engie IT CI/CD demo with docker
+The Jenkins pipeline deploys a wordpress application in AWS & Azure
